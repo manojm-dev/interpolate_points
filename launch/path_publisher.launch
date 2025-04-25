@@ -1,0 +1,7 @@
+<launch>
+    <!-- Launch the interpolate_points_node -->
+    <node pkg="interpolate_points" type="interpolate_points_node" name="interpolate_points_node" output="screen" />
+
+    <!-- Launch RViz -->
+    <node pkg="rviz" type="rviz" name="rviz" output="screen" args="-d $(find interpolate_points)/rviz/config.rviz" />
+</launch>
