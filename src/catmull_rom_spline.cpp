@@ -1,8 +1,8 @@
-#include "interpolate_points/catmull_rom_spline.h"
+#include "trajectory_generator/catmull_rom_spline.h"
 #include <cmath>
 #include <geometry_msgs/PoseStamped.h>
 
-namespace interpolate_points {
+namespace trajectory_generator {
 
 CatmullRomSpline::CatmullRomSpline(const std::vector<Point2D>& control_points, double alpha)
     : control_points_(control_points), alpha_(alpha) {

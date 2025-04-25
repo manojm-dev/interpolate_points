@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(interpolate_points)
+project(trajectory_generator)
 
 # Find catkin and required packages
 find_package(catkin REQUIRED COMPONENTS

@@ -1,11 +1,11 @@
-#ifndef interpolate_points_CATMULL_ROM_SPLINE_H
-#define interpolate_points_CATMULL_ROM_SPLINE_H
+#ifndef trajectory_generator_CATMULL_ROM_SPLINE_H
+#define trajectory_generator_CATMULL_ROM_SPLINE_H
 
 #include <vector>
 #include <geometry_msgs/Point.h>
 #include <nav_msgs/Path.h>
 
-namespace interpolate_points {
+namespace trajectory_generator {
 
 /**
  * @brief 2D point structure with operator overloading
@@ -77,6 +77,6 @@ private:
     double alpha_;
 };
 
-} // namespace interpolate_points
+} // namespace trajectory_generator
 
-#endif // interpolate_points_CATMULL_ROM_SPLINE_H
+#endif // trajectory_generator_CATMULL_ROM_SPLINE_H

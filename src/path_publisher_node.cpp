@@ -1,16 +1,16 @@
 #include <ros/ros.h>
 #include <nav_msgs/Path.h>
-#include "interpolate_points/catmull_rom_spline.h"
+#include "trajectory_generator/catmull_rom_spline.h"
 
 int main(int argc, char** argv) {
-    ros::init(argc, argv, "interpolate_points");
+    ros::init(argc, argv, "trajectory_generator");
     ros::NodeHandle nh;
 
     // Create publisher for the path
     ros::Publisher path_pub = nh.advertise<nav_msgs::Path>("spline_path", 1);
 
     // Define control points
-    std::vector<interpolate_points::Point2D> control_points = {
+    std::vector<trajectory_generator::Point2D> control_points = {
         {0.0, 0.0},  // P0
         {1.0, 2.0},  // P1
         {4.0, 2.0},  // P2
@@ -18,7 +18,7 @@ int main(int argc, char** argv) {
     };
 
     // Create Catmull-Rom spline with centripetal parameter alpha = 0.5
-    interpolate_points::CatmullRomSpline spline(control_points, 0.5);
+    trajectory_generator::CatmullRomSpline spline(control_points, 0.5);
 
     // Generate the path
     nav_msgs::Path path = spline.generatePath(0.1);  // 0.1 meter resolution

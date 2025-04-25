@@ -1,7 +1,7 @@
 <launch>
-    <!-- Launch the interpolate_points_node -->
-    <node pkg="interpolate_points" type="interpolate_points_node" name="interpolate_points_node" output="screen" />
+    <!-- Launch the trajectory_generator_node -->
+    <node pkg="trajectory_generator" type="trajectory_generator_node" name="trajectory_generator_node" output="screen" />
 
     <!-- Launch RViz -->
-    <node pkg="rviz" type="rviz" name="rviz" output="screen" args="-d $(find interpolate_points)/rviz/config.rviz" />
+    <node pkg="rviz" type="rviz" name="rviz" output="screen" args="-d $(find trajectory_generator)/rviz/config.rviz" />
 </launch>
